@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './components/templats/header/header.component';
 import { FooterComponent } from './components/templats/footer/footer.component';
 import { NavComponent } from './components/templats/nav/nav.component';
+import { HomeComponent } from './views/home/home.component';
 
 import { RouterOutlet } from '@angular/router';
 
@@ -12,7 +13,8 @@ import { RouterOutlet } from '@angular/router';
   [ RouterOutlet, 
     HeaderComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent
   ],
   templateUrl: 'app.component.html'
 })
