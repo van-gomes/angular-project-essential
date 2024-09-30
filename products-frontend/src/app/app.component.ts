@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './components/templats/header/header.component';
 import { FooterComponent } from './components/templats/footer/footer.component';
+import { NavComponent } from './components/templats/nav/nav.component';
 
 import { RouterOutlet } from '@angular/router';
 
@@ -10,7 +11,8 @@ import { RouterOutlet } from '@angular/router';
   imports: 
   [ RouterOutlet, 
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NavComponent
   ],
   templateUrl: 'app.component.html'
 })
