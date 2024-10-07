@@ -4,6 +4,8 @@ import { FooterComponent } from './components/templats/footer/footer.component';
 import { NavComponent } from './components/templats/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 
+import { MatButtonModule } from  '@angular/material/button';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,7 +14,8 @@ import { HomeComponent } from './views/home/home.component';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    MatButtonModule
   ],
   templateUrl: 'app.component.html'
 })

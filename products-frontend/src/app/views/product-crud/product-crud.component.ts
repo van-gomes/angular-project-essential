@@ -10,4 +10,12 @@ import { Router } from '@angular/router'
   styleUrl: './product-crud.component.css'
 })
 
-export class ProductCrudComponent {}
+export class ProductCrudComponent {
+
+  constructor(private router: Router) {
+  }
+
+    navigateToProductCreate(): void {
+      this.router.navigate(['/products/create']);
+    }
+  }
