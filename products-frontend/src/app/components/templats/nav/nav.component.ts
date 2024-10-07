@@ -1,9 +1,9 @@
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { Component } from '@angular/core';
 
 import { RouterOutlet } from '@angular/router';
 
-import { MatSidenavModule } from  '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-nav',
