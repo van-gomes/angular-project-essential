@@ -2,8 +2,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { Component } from '@angular/core';
 
-import { RouterOutlet } from '@angular/router';
-
+import { RouterOutlet, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -11,7 +10,8 @@ import { RouterOutlet } from '@angular/router';
   imports: [
     MatSidenavModule,
     MatListModule,
-    RouterOutlet
+    RouterOutlet,
+    RouterModule
   ],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
