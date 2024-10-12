@@ -11,6 +11,10 @@
     padding-right: 10px;
 }
 
+.container {
+    background-color: #fff;
+}
+
 .content {
     padding: 16px;
     color: #FFF;
