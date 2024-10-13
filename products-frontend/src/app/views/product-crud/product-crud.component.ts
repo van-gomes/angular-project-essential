@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import { ProductReadComponent } from '../../components/product/product-read/product-read.component';
 
 @Component({
   selector: 'app-product-crud',
   standalone: true,
-  imports: [],
+  imports: [
+    ProductReadComponent
+  ],
   templateUrl: './product-crud.component.html',
   styleUrl: './product-crud.component.css'
 })
