@@ -1,9 +1,10 @@
 import { Component, LOCALE_ID } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, CommonModule } from '@angular/common';
 import { Product } from '../product.model';
 import { ProductService} from '../product.service';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from  '@angular/common';
+import { MatTableModule } from '@angular/material/table';
 
 registerLocaleData(localePt);
 
@@ -11,7 +12,9 @@ registerLocaleData(localePt);
   selector: 'app-product-read',
   standalone: true,
   imports: [
-    NgFor
+    NgFor,
+    CommonModule,
+    MatTableModule
   ],
   providers: [{
     provide: LOCALE_ID,
@@ -22,7 +25,7 @@ registerLocaleData(localePt);
 })
 export class ProductReadComponent {
   products: Product[] = []
-  displayedColumns = ['id', 'name', 'price', 'action']
+  displayedColumns = ['id', 'name', 'price']
 
   constructor(private productService: ProductService) { }
 
