@@ -24,6 +24,11 @@
       "id": "fddc",
       "name": "Produto vindo do formulário",
       "price": "2000"
+    },
+    {
+      "id": "3946",
+      "name": "Teste produto",
+      "price": "200"
     }
   ]
 }
