@@ -1,6 +1,7 @@
 import { Component, LOCALE_ID } from '@angular/core';
 import { NgFor, CommonModule } from '@angular/common';
 import { Product } from '../product.model';
+import { RouterModule } from '@angular/router';
 import { ProductService} from '../product.service';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from  '@angular/common';
@@ -14,7 +15,8 @@ registerLocaleData(localePt);
   imports: [
     NgFor,
     CommonModule,
-    MatTableModule
+    MatTableModule,
+    RouterModule
   ],
   providers: [{
     provide: LOCALE_ID,
@@ -25,7 +27,7 @@ registerLocaleData(localePt);
 })
 export class ProductReadComponent {
   products: Product[] = []
-  displayedColumns = ['id', 'name', 'price']
+  displayedColumns = ['id', 'name', 'price', 'action']
 
   constructor(private productService: ProductService) { }
 
