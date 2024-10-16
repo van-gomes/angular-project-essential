@@ -2,8 +2,8 @@
   "products": [
     {
       "id": "1",
-      "name": "Caneta BIC Preta",
-      "price": 5.89
+      "name": "Caneta BIC Preta 2",
+      "price": "6.00"
     },
     {
       "id": "2",
@@ -28,7 +28,12 @@
     {
       "id": "3946",
       "name": "Teste produto",
-      "price": "200"
+      "price": "400"
+    },
+    {
+      "id": "6388",
+      "name": "Conjunto Marca Texto Pastel",
+      "price": "75.00"
     }
   ]
 }
