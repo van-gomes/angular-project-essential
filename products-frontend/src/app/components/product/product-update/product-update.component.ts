@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { ProductService } from '../product.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { MatCardModule } from  '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { CommonModule } from '@angular/common';
 import { Product } from '../product.model';
 
 @Component({
@@ -14,13 +15,14 @@ import { Product } from '../product.model';
     FormsModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    CommonModule // Adiciona CommonModule
   ],
   templateUrl: './product-update.component.html',
-  styleUrl: './product-update.component.css'
+  styleUrls: ['./product-update.component.css']
 })
 export class ProductUpdateComponent {
-  product?: Product;
+  product: Product = { id: 0, name: '', price: 0 };
 
   constructor(
     private productService: ProductService,
@@ -36,14 +38,15 @@ export class ProductUpdateComponent {
   }
 
   updateProduct(): void {
-    this.productService.update(this.product!).subscribe(() => {
-      this.productService.showMessage("Produto atualizado com sucesso!");
-      this.router.navigate(["/products"]);
-    });
+    if (this.product) {
+      this.productService.update(this.product).subscribe(() => {
+        this.productService.showMessage("Produto atualizado com sucesso!");
+        this.router.navigate(["/products"]);
+      });
+    }
   }
   
   cancel(): void {
     this.router.navigate(["/products"]);
   }
-
 }
