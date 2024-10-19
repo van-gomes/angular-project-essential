@@ -22,7 +22,7 @@ import { Product } from '../product.model';
   styleUrls: ['./product-update.component.css']
 })
 export class ProductUpdateComponent {
-  product: Product = { id: 0, name: '', price: 0 };
+  product: Product = { id: '0', name: '', price: 0 };
 
   constructor(
     private productService: ProductService,
@@ -31,12 +31,25 @@ export class ProductUpdateComponent {
   ) {}
 
   ngOnInit(): void {
-    const id = +(this.route.snapshot.paramMap.get("id") ?? 0);
-    this.productService.readById(id).subscribe((product) => {
-      this.product = product;
-    });
+    // Obtém o ID da rota como string
+    const id = this.route.snapshot.paramMap.get("id");
+  
+    if (id) {
+      this.productService.readById(id).subscribe({
+        next: (product) => {
+          this.product = product;
+        },
+        error: () => {
+          this.productService.showMessage("Produto não encontrado!");
+          this.router.navigate(["/products"]);
+        }
+      });
+    } else {
+      this.productService.showMessage("ID do produto é inválido.");
+      this.router.navigate(["/products"]);
+    }
   }
-
+  
   updateProduct(): void {
     if (this.product) {
       this.productService.update(this.product).subscribe(() => {
