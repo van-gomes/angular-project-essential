@@ -11,11 +11,6 @@
       "price": 12000.89
     },
     {
-      "id": "3",
-      "name": "Sansung S20+ Ultra",
-      "price": "7520.89"
-    },
-    {
       "id": "4",
       "name": "Lapis Preto Básico",
       "price": "1.50"
@@ -29,11 +24,6 @@
       "id": "3946",
       "name": "Teste produto",
       "price": "400"
-    },
-    {
-      "id": "6388",
-      "name": "Conjunto Marca Texto Pastel",
-      "price": "75.00"
     }
   ]
 }
