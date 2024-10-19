@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ProductReadComponent } from '../../components/product/product-read/product-read.component';
 import { ProductUpdateComponent } from '../../components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from '../../components/product/product-delete/product-delete.component';
+import { HeaderService } from '../../components/templats/header/header.service';
 
 @Component({
   selector: 'app-product-crud',
@@ -19,10 +20,12 @@ import { ProductDeleteComponent } from '../../components/product/product-delete/
 
 export class ProductCrudComponent {
 
-  constructor(private router: Router) {
-  }
-
-    navigateToProductCreate(): void {
-      this.router.navigate(['/products/create']);
+  constructor(private router: Router, private headerService: HeaderService ) {
+    headerService.headerData = {
+      title: 'Início',
+      icon: 'home',
+      routeUrl: ''
     }
+
   }
+}
