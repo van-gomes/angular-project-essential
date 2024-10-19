@@ -11,19 +11,9 @@
       "price": 12000.89
     },
     {
-      "id": "4",
-      "name": "Lapis Preto Básico",
-      "price": "1.50"
-    },
-    {
       "id": "fddc",
       "name": "Produto vindo do formulário",
       "price": "2000"
-    },
-    {
-      "id": "3946",
-      "name": "Teste produto",
-      "price": "400"
     }
   ]
 }
