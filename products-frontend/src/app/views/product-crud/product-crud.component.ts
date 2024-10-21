@@ -20,12 +20,19 @@ import { HeaderService } from '../../components/templats/header/header.service';
 
 export class ProductCrudComponent {
 
-  constructor(private router: Router, private headerService: HeaderService ) {
+  constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
-      title: 'Início',
-      icon: 'home',
-      routeUrl: ''
+      title: 'Cadastro de Produtos',
+      icon: 'storefront',
+      routeUrl: '/products'
     }
-
   }
+
+  ngOnInit(): void {
+  }
+
+  navigateToProductCreate(): void {
+    this.router.navigate(['/products/create'])
+  }
+  
 }
