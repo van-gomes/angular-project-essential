@@ -23,7 +23,7 @@ registerLocaleData(localePt);
     useValue: 'pt-BR'
   }],
   templateUrl: './product-read.component.html',
-  styleUrl: './product-read.component.css'
+  styleUrls: ['./product-read.component.css']
 })
 export class ProductReadComponent {
   products: Product[] = [];

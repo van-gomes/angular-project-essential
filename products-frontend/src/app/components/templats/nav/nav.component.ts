@@ -14,7 +14,7 @@ import { RouterOutlet, RouterModule } from '@angular/router';
     RouterModule
   ],
   templateUrl: './nav.component.html',
-  styleUrl: './nav.component.css'
+  styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
 

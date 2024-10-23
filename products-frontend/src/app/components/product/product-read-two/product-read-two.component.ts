@@ -7,7 +7,7 @@ import { ProductReadTwoDataSource, ProductReadTwoItem } from './product-read-two
 @Component({
   selector: 'app-product-read-two',
   templateUrl: './product-read-two.component.html',
-  styleUrl: './product-read-two.component.css',
+  styleUrls: ['./product-read-two.component.css'],
   standalone: true,
   imports: [MatTableModule, MatPaginatorModule, MatSortModule]
 })

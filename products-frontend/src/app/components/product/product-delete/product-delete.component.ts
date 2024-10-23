@@ -17,7 +17,7 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule
   ],
   templateUrl: './product-delete.component.html',
-  styleUrl: './product-delete.component.css'
+  styleUrls: ['./product-delete.component.css']
 })
 export class ProductDeleteComponent {
   product: Product = { id: '0', name: '', price: 0 };

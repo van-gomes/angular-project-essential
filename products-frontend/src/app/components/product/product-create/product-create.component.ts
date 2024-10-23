@@ -18,7 +18,7 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule
   ],
   templateUrl: './product-create.component.html',
-  styleUrl: './product-create.component.css'
+  styleUrls: ['./product-create.component.css']
 })
 
 export class ProductCreateComponent implements OnInit{

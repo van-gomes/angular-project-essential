@@ -12,7 +12,7 @@ import { RedDirective } from '../../../directives/red.directive';
     RedDirective
   ],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
 

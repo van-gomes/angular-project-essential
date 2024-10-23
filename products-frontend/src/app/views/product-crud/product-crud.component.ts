@@ -15,7 +15,7 @@ import { HeaderService } from '../../components/templats/header/header.service';
     ProductDeleteComponent
   ],
   templateUrl: './product-crud.component.html',
-  styleUrl: './product-crud.component.css'
+  styleUrls: ['./product-crud.component.css']
 })
 
 export class ProductCrudComponent {
