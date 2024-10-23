@@ -1,3 +1,17 @@
 button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
     margin-bottom: 30px;
+    color: #FFFFFF;
+    background-color: #4169E1;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #FFDB58;
+    color: #4169E1;
 }
