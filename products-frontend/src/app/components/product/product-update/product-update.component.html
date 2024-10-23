@@ -1,4 +1,4 @@
-<mat-card *ngIf="product">
+<mat-card *ngIf="product" class="container_card ">
   <mat-card-title>Alterar Produto</mat-card-title>
   <form>
     <mat-form-field>
@@ -8,11 +8,13 @@
       <input matInput placeholder="Preço (R$)" [(ngModel)]="product.price" name="price">
     </mat-form-field>
   </form>
-  <button mat-raised-button (click)="updateProduct()" color="primary">
-    Atualizar
-  </button>
+  <div class="container_card_button">
+    <button mat-raised-button (click)="updateProduct()" color="primary">
+      Atualizar
+    </button>
 
-  <button mat-raised-button (click)="cancel()">
-    Cancelar
-  </button>
+    <button mat-raised-button (click)="cancel()">
+      Cancelar
+    </button>
+  </div>
 </mat-card>
