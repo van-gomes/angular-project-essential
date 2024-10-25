@@ -11,6 +11,20 @@
     color: #FED9B7;
 }
 
+.header_menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 3rem;
+}
+
+.header_menu a {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
 .header .logo {
     max-height: 32px;
 }
