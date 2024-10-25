@@ -3,10 +3,12 @@
         fixedInViewport="true" fixedTopGap="64">
         <mat-nav-list class="nav-list">
             <a mat-list-item routerLink="/">
-                <i class="material-icons">
-                    home
-                </i>
+                <button mat-button [matMenuTriggerFor]="menu">
+                    <i class="material-icons">
+                        home
+                    </i>
                 Início
+                </button>
             </a>
             <a mat-list-item routerLink="/products">
                 <i class="material-icons">

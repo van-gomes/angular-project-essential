@@ -1,24 +1,38 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HeaderService } from './header.service';
-// import { RouterOutlet, RouterModule } from '@angular/router';
+import { ProductReadComponent } from '../../product/product-read/product-read.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
+    ProductReadComponent,
+    CommonModule,
     MatToolbarModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule,
     RouterModule
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  showComponent = false;
 
   constructor(private headerService: HeaderService) { }
 
   ngOnInit(): void {
+  }
+
+  toggleComponent(): void {
+    this.showComponent = !this.showComponent;
   }
 
   get title(): string {
