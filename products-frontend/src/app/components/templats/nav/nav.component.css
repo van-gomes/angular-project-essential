@@ -1,23 +1,24 @@
 .sidenav {
     width: 200px;
-    background-color: #2F4F4F;
+    background-color: #00AFB9;
 }
 
 .sidenav a {
-    color: #2F4F4F;
+    color: blue;
 }
 
 .sidenav a:hover {
-    background-color: #4169E1;
+    background-color: #F07167;
 }
 
 .sidenav i {
     padding-right: 10px;
-    color: #FF6F61;
+    color: #FED9B7;;
 }
 
 .container {
     background-color: #F0F4F8;
+    color: #F07167;
 }
 
 .content {

@@ -1,17 +1,14 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #2F4F4F;
+    background-color: #0081A7;
 }
 
 table th {
-  background-color: #2F4F4F;
-  color: #FFFFFF;
+  color: #FED9B7;
 }
 
 table i {
-  /* width: 24px;
-  height: 24px; */
   display: inline-block;
   padding: 0.2rem;
   margin-right: 10px;
