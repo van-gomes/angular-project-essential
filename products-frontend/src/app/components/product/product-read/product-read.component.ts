@@ -1,11 +1,12 @@
 import { Component, LOCALE_ID } from '@angular/core';
 import { NgFor, CommonModule } from '@angular/common';
 import { Product } from '../product.model';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { ProductService} from '../product.service';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from  '@angular/common';
 import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
 
 registerLocaleData(localePt);
 
@@ -16,6 +17,7 @@ registerLocaleData(localePt);
     NgFor,
     CommonModule,
     MatTableModule,
+    MatButtonModule,
     RouterModule
   ],
   providers: [{
@@ -29,11 +31,15 @@ export class ProductReadComponent {
   products: Product[] = [];
   displayedColumns = ['id', 'name', 'price', 'action']
   
-  constructor(private productService: ProductService) { }
+  constructor(private router: Router, private productService: ProductService) { }
 
   ngOnInit(): void {
     this.productService.read().subscribe(products => {
       this.products = products
     })
+  }
+
+  navigateToProductCreate(): void {
+    this.router.navigate(['/products/create'])
   }
 }
