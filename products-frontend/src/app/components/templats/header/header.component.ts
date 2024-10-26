@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HeaderService } from './header.service';
+import { HomeComponent } from '../../../views/home/home.component';
 import { ProductReadComponent } from '../../product/product-read/product-read.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
@@ -13,10 +14,10 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [
     ProductReadComponent,
+    HomeComponent,
     CommonModule,
     MatToolbarModule,
     MatButtonModule,
-    MatMenuModule,
     MatIconModule,
     RouterModule
   ],
@@ -24,15 +25,20 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  showComponent = false;
+  showComponentHome = false;
+  showComponentProducts = false;
 
   constructor(private headerService: HeaderService) { }
 
   ngOnInit(): void {
   }
 
-  toggleComponent(): void {
-    this.showComponent = !this.showComponent;
+  toggleComponentHome(): void {
+    this.showComponentHome = !this.showComponentHome;
+  }
+
+  toggleComponentProducts(): void {
+    this.showComponentProducts = !this.showComponentProducts;
   }
 
   get title(): string {
