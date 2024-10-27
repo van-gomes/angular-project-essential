@@ -7,6 +7,8 @@ import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from  '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 registerLocaleData(localePt);
 
@@ -18,6 +20,8 @@ registerLocaleData(localePt);
     CommonModule,
     MatTableModule,
     MatButtonModule,
+    MatCardModule,
+    MatIconModule,
     RouterModule
   ],
   providers: [{
@@ -29,7 +33,7 @@ registerLocaleData(localePt);
 })
 export class ProductReadComponent {
   products: Product[] = [];
-  displayedColumns = ['id', 'name', 'price', 'action']
+  displayedColumns = ['icon', 'id', 'name', 'price', 'action']
   
   constructor(private router: Router, private productService: ProductService) { }
 

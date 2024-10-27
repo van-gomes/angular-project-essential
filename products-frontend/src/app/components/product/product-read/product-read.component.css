@@ -1,11 +1,14 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #0081A7;
+    color: #fff;
+    background-color: #1C1C28;
+    /* background-color: #0081A7; */
 }
 
-table th {
-  color: #FED9B7;
+table th, table td {
+    color: #fff;
+  /* color: #FED9B7; */
 }
 
 table i {
@@ -31,6 +34,34 @@ table i {
 
 i:hover {
     background-color: #FFDB58;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    background-color: #1C1C28;
+}
+
+.card-icon {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%; /* Define a largura do ícone */
+    height: 100%; /* Ocupa toda a altura do card */
+    border-radius: 8px 0 0 8px;
+}
+
+.card-icon .mat-icon {
+    font-size: 36px;
+    color: #ff6b81; /* Cor do ícone */
+}
+
+.card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 16px;
 }
 
 button {

@@ -1,12 +1,12 @@
 .home {
-    background-color: #fff;
+    background-color: #2E2E3E;
 }
 
 .home .title {
     font-size: 3rem;
     font-weight: 300;
     line-height: 1.2;
-    color: #4169E1;;
+    color: #fff;
 }
 
 .home .subtitle {
