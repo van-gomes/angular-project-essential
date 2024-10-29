@@ -36,33 +36,55 @@ i:hover {
     background-color: #FFDB58;
 }
 
-.card-content {
+.card_container {
     display: flex;
-    align-items: center;
-    background-color: #1C1C28;
+    gap: 5rem;
+    height: 120px;
+    background-color: transparent;
 }
 
-.card-icon {
-    background-color: #fff;
+.card_content_icon {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
-    width: 30%; /* Define a largura do ícone */
-    height: 100%; /* Ocupa toda a altura do card */
+    /* height: 100%; */
     border-radius: 8px 0 0 8px;
+}
+
+.card_content_actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    max-height: 105px;
+    border-radius: 0 8px 8px 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.mat-mdc-card-content {
+    display: flex;
+    width: 100%;
+    max-height: 105px;
+    padding: 0 16px;
+    gap: 3rem;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 10rem;
 }
 
 .card-icon .mat-icon {
     font-size: 36px;
-    color: #ff6b81; /* Cor do ícone */
+    color: #ff6b81;
 }
 
-.card-actions {
+/* .card-actions {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-left: 16px;
-}
+} */
 
 button {
     padding: 10px 20px;
