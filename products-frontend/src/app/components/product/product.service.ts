@@ -31,11 +31,14 @@ export class ProductService {
 
   read(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseUrl).pipe(
-      map((obj) => obj),
+      map((products) => products.map(product => ({
+        ...product,
+        price: typeof product.price === 'string' ? parseFloat(product.price) : product.price
+      }))),
       catchError((e) => this.errorHandler(e))
     );
   }
-
+  
   readById(id: string): Observable<Product> {
     const url = `${this.baseUrl}/${id}`;
     return this.http.get<Product>(url).pipe(
