@@ -1,41 +1,58 @@
 .card-container {
     display: flex;
-}
-
-.card-content-icon {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 8%;
-    padding: 0 16px;
-}
-
-.card-content-product {
-    display: flex;
-    height: 100%;
+    padding: 8px;
     color: #fff;
     background-color: #000;
-}
-
-/* .mat-mdc-card-content {
+  }
+  
+  .card-content-icon {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8%;
+    background-color: #fff;
+    color: #ffdd00;
+  }
+  
+  .card-content-icon mat-icon {
+    font-size: 1.5rem;
+    object-fit: cover;
+  }
+  
+  .card-content-product {
+    display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 99%;
-    padding: 0 16px;
-} */
-
-.mat-card-actions {
+    padding: 16px;
+    width: 92%;
+  }
+  
+  .product-info {
+    margin-bottom: 16px;
+  }
+  
+  .product-name,
+  .product-price {
+    margin: 0;
+  }
+  
+  .product-price {
+    font-weight: bold;
+  }
+  
+  .mat-card-actions {
     display: flex;
     gap: 1rem;
-}
-
-.card-icon .mat-icon {
-    font-size: 36px;
-    color: #ff6b81;
-}
-
-button {
+  }
+  
+  .edit-button,
+  .delete-button {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  button {
     padding: 10px 20px;
     font-size: 1rem;
     font-weight: bold;
@@ -46,9 +63,9 @@ button {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #0081A7;
     color: white;
-}
+  }  
