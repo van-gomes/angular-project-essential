@@ -1,40 +1,29 @@
-.card_container {
+.card-container {
     display: flex;
-    gap: 5rem;
-    background-color: transparent;
 }
 
-.card_content_icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 5%;
-    border-radius: 8px 0 0 8px;
-    background-color: #fff;
-}
-
-.product {
-    color: #fff;
-    font-size: 1rem;
-}
-
-.card_content_actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    background-color: #000;
-    border-radius: 0 8px 8px 0;
-}
-
-.mat-mdc-card-content {
+.card-content-icon {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
+    width: 8%;
     padding: 0 16px;
 }
+
+.card-content-product {
+    display: flex;
+    height: 100%;
+    color: #fff;
+    background-color: #000;
+}
+
+/* .mat-mdc-card-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 99%;
+    padding: 0 16px;
+} */
 
 .mat-card-actions {
     display: flex;
