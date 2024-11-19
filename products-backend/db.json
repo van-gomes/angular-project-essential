@@ -9,6 +9,11 @@
       "id": "2",
       "name": "Notebook Mac Pro M1",
       "price": 12000.89
+    },
+    {
+      "id": "db7e",
+      "name": "Monitor Dell",
+      "price": "4.500,00"
     }
   ]
 }
