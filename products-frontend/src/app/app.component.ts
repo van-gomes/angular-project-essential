@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/templats/header/header.component';
 import { FooterComponent } from './components/templats/footer/footer.component';
 // import { NavComponent } from './components/templats/nav/nav.component';
@@ -11,6 +11,7 @@ import { HomeComponent } from './views/home/home.component';
   imports: 
   [ 
     RouterOutlet,
+    RouterModule,
     HeaderComponent,
     FooterComponent,
     // NavComponent,

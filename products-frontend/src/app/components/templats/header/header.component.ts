@@ -38,6 +38,8 @@ export class HeaderComponent {
 
   toggleComponentProducts(): void {
     this.showComponentProducts = !this.showComponentProducts;
+    console.log(this.showComponentProducts);
+    console.log("chamou produtos")
   }
 
   get title(): string {
