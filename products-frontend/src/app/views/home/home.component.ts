@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-
-import { MatCardModule } from  '@angular/material/card'
+import { MatCardModule } from '@angular/material/card';
 import { HeaderService } from '../../components/templats/header/header.service';
+import { Router } from '@angular/router';
+import { Product } from '../../components/product/product.model';
 
 @Component({
   selector: 'app-home',
@@ -12,17 +13,22 @@ import { HeaderService } from '../../components/templats/header/header.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
 
-  constructor(private headerService: HeaderService) {
+export class HomeComponent {
+  products: Product[] = [];
+
+  constructor(private headerService: HeaderService,
+              private router: Router
+            ) {
     headerService.headerData = {
       title: 'Início',
       icon: 'home',
       routeUrl: ''
-    }
+    };
   }
 
-  ngOnInit(): void {
+  navigateToProductCreate(): void {
+    this.router.navigate(['/products/create']);
   }
-
 }
+

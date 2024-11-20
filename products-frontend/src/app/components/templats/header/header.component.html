@@ -7,22 +7,20 @@
     </span>
 
     <div class="header_menu">
-        <button mat-icon-button routerLink="/">
-            <mat-icon class="header_menu_icon">home</mat-icon>
-            <span class="header_menu_link">Início</span>
-        </button>
-
-        <button mat-icon-button (click)="toggleComponentProducts()">
-            <mat-icon class="header_menu_icon">store</mat-icon>
-            <span class="header_menu_link">Produtos</span>
-        </button>
-        <!-- <button mat-icon-button routerLink="/products">
-            <mat-icon class="header_menu_icon">store</mat-icon>
-            <span class="header_menu_link">Produtos</span>
-        </button> -->
+      <!-- Botão para exibir o componente Home -->
+      <button mat-icon-button (click)="toggleComponent('home')">
+        <mat-icon class="header_menu_icon">home</mat-icon>
+        <span class="header_menu_link">Início</span>
+      </button>
+  
+      <!-- Botão para exibir o componente Produtos -->
+      <button mat-icon-button (click)="toggleComponent('products')">
+        <mat-icon class="header_menu_icon">store</mat-icon>
+        <span class="header_menu_link">Produtos</span>
+      </button>
     </div>
-</mat-toolbar>
-
-<div *ngIf="showComponentProducts">
+  </mat-toolbar>
+   
+  <div *ngIf="currentComponent === 'products'">
     <app-product-read></app-product-read>
-</div>
+  </div>  

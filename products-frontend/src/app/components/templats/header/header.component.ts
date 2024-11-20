@@ -4,7 +4,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HeaderService } from './header.service';
 import { HomeComponent } from '../../../views/home/home.component';
 import { ProductReadComponent } from '../../product/product-read/product-read.component';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 
@@ -24,34 +24,28 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  showComponentHome = false;
-  showComponentProducts = false;
+  currentComponent: string = 'home'; // Componente inicial é 'home'
 
-  constructor(private headerService: HeaderService) { }
+  constructor(private headerService: HeaderService) {}
 
-  ngOnInit(): void {
+  // toggleComponent(): void {
+  //   this.currentComponent = this.currentComponent === 'home' ? 'products' : 'home';
+  // }
+
+  toggleComponent(component: string): void {
+    // Atualiza o valor de currentComponent para o componente clicado
+    this.currentComponent = component;
   }
-
-  toggleComponentHome(): void {
-    this.showComponentHome = !this.showComponentHome;
-  }
-
-  toggleComponentProducts(): void {
-    this.showComponentProducts = !this.showComponentProducts;
-    console.log(this.showComponentProducts);
-    console.log("chamou produtos")
-  }
-
+  
   get title(): string {
-    return this.headerService.headerData.title
+    return this.headerService.headerData?.icon ?? '';
   }
 
   get icon(): string {
-    return this.headerService.headerData.icon
+    return this.headerService.headerData?.routeUrl ?? '';
   }
 
   get routeUrl(): string {
-    return this.headerService.headerData.routeUrl
+    return this.headerService.headerData.routeUrl;
   }
-
 }
