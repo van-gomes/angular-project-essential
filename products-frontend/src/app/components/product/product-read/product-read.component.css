@@ -39,17 +39,24 @@
   .product-info {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.7rem;
+    max-width: 300px;
+    width: 100%;
     margin: 1rem 0;
-    font-size: 1rem;
   }
   
   .product-name,
   .product-price {
     margin: 0;
   }
+
+  .product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
   
   .product-price {
+    font-size: 1.5rem;
     font-weight: bold;
   }
   
@@ -65,7 +72,8 @@
     display: flex;
     max-width: 150px;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 3rem;
+    margin-right: 1rem;
     background-color: #0081A7;
   }
 
