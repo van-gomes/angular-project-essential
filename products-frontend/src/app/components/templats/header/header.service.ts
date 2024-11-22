@@ -1,25 +1,20 @@
 import { Injectable } from '@angular/core';
-import { HeaderData } from './header-data-model';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HeaderService {
-
-  private _headerData = new BehaviorSubject<HeaderData>({
-    title: 'Início',
-    icon: 'home',
+  private _headerData = {
+    title: '',
+    icon: '',
     routeUrl: ''
-  })
+  };
 
-  constructor() { }
-
-  get headerData(): HeaderData {
-    return this._headerData.value
+  get headerData() {
+    return this._headerData;
   }
 
-  set headerData(headerData: HeaderData) {
-    this._headerData.next(headerData)
+  set headerData(data: { title: string; icon: string; routeUrl: string }) {
+    this._headerData = data;
   }
 }

@@ -26,9 +26,5 @@ export class HomeComponent {
       routeUrl: ''
     };
   }
-
-  navigateToProductCreate(): void {
-    this.router.navigate(['/products/create']);
-  }
 }
 

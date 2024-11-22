@@ -42,4 +42,8 @@ export class ProductReadComponent {
       console.log(products);
     })
   }
+
+  navigateToProductCreate(): void {
+    this.router.navigate(['/products/create']);
+  }
 }

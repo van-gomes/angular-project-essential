@@ -1,24 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderService } from '../../components/templats/header/header.service';
+import { ProductReadComponent } from '../../components/product/product-read/product-read.component';
 
 @Component({
   selector: 'app-product-crud',
   standalone: true,
-  imports: [],
+  imports: [
+    ProductReadComponent
+  ],
   templateUrl: './product-crud.component.html',
   styleUrls: ['./product-crud.component.css']
 })
-
-export class ProductCrudComponent {
+export class ProductCrudComponent implements OnInit {
 
   constructor(private headerService: HeaderService) {
-    headerService.headerData = {
+    this.headerService.headerData = {
       title: 'Cadastro de Produtos',
       icon: 'storefront',
-      routeUrl: '/products'
-    }
+      routeUrl: 'products'
+    };
   }
 
   ngOnInit(): void {
-  } 
+    console.log('ProductCrudComponent carregado.');
+  }
 }

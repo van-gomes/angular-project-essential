@@ -13,7 +13,8 @@ export const routes: Routes = [
       },
       {
         path: "products",
-        component: ProductCrudComponent
+        component: ProductCrudComponent,
+        canActivate: [() => { console.log('Rota Products ativada'); return true; }]
       },
       {
         path: "products/create",
