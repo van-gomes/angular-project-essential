@@ -103,5 +103,9 @@
     .card-content-details {
       max-width: 100%;
     }
-    
+
+    .card-actions {
+      display: flex;
+      margin-top: 0rem;
+    }    
   }
