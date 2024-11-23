@@ -1,4 +1,6 @@
 .container_card {
+    display: flex;
+    margin: 1rem;
     background-color: #F0F4F8;
     color: #2F4F4F;
 }
@@ -13,6 +15,7 @@ form {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    margin: 0.5rem;
     background-color: #F0F4F8;
 }
 

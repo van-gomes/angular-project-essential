@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     background-color: #1C1C28;
-    /* background-color: #0081A7; */
 }
 
 .header a {
@@ -10,7 +9,6 @@
     align-items: center;
     text-decoration: none;
     color: #fff;
-    /* color: #FED9B7; */
 }
 
 .header_menu {
@@ -58,5 +56,4 @@
 .header .title-group i {
     padding-right: 5px;
     color: #FDCB6E;
-    /* color: #FF6F61; */
 }

@@ -1,3 +1,10 @@
+.button-new-product {
+  display: flex;
+  margin: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
 .card-container {
     display: flex;
     padding: 8px;
@@ -6,6 +13,7 @@
     
   .card-content-product {
     display: flex;
+    justify-content: space-between;
     gap: 2rem;
     width: 100%;
     color: #fff;
@@ -73,7 +81,6 @@
     max-width: 150px;
     width: 100%;
     margin-top: 3rem;
-    margin-right: 1rem;
     background-color: #0081A7;
   }
 
