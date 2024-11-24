@@ -7,10 +7,11 @@
 
 .card-container {
     display: flex;
-    padding: 8px;
+    padding: 1rem;
+    /* padding: 8px; */
     background-color: transparent;
   }
-    
+
   .card-content-product {
     display: flex;
     justify-content: space-between;
@@ -85,7 +86,7 @@
   }
 
   button {
-    padding: 10px 20px;
+    padding: .5rem 1rem;
     font-size: .5rem;
     font-weight: bold;
     margin: .3rem;
@@ -124,3 +125,5 @@
       margin-top: 0rem;
     }    
   }
+    
+ 
